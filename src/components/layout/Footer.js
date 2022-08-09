@@ -1,7 +1,4 @@
 import React from "react";
-import { FaFacebookF } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { GrMail } from "react-icons/gr";
 export default function Footer() {
   return (
     
