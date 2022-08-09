@@ -39,7 +39,7 @@ export default function Landing() {
   }
   return (
     <>
-      <Navbar transparent />
+      <Navbar />
       <main>
         <div
           className="relative pt-16 pb-32 flex content-center items-center justify-center"
