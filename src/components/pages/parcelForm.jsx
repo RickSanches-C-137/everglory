@@ -1,13 +1,9 @@
 import { requestClient } from "../../utils/request-client";
-import React, { useState, useContext } from "react";
-import AuthContext from "../../context/AuthContext";
+import React, { useState } from "react";
 import "antd/dist/antd.css";
 import { message } from "antd";
 
-function ParcelForm({ getParcels }) {
-  //const [nav, setNav] = useState(true);
-
-  const { loggedIn } = useContext(AuthContext);
+function ParcelForm() {
   const [item, setItem] = useState("");
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
@@ -49,7 +45,6 @@ function ParcelForm({ getParcels }) {
       {/* Content */}
       <main class="px-16 py-6 md:col-span-4">
         <header>
-          <h1 className="text-xl">Hi, {loggedIn.email}</h1>
           <h4 class="font-bold pb-2">CREATE SHIPMENT</h4>
         </header>
 
