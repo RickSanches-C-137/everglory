@@ -1,4 +1,4 @@
-import axios from "axios";
+import { requestClient } from "../../utils/request-client";
 import React, { useState } from "react";
 import Footer from "../layout/Footer";
 export default function Search() {
@@ -8,8 +8,8 @@ export default function Search() {
   async function searchParcel(e) {
     e.preventDefault();
     try {
-      const res = await axios.get(`http://localhost:8080/parcel/${_id}`);
-      setParcels(res.data);
+      const res =  await requestClient.post(`parcel/${_id}`);
+       setParcels(res.data);
     } catch (err) {
       console.error(err);
     }
