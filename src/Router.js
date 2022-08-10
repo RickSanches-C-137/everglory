@@ -14,6 +14,7 @@ import AuthContext from "./context/AuthContext";
 import Search from "./components/pages/search";
 import { Update } from "./components/pages/updateParcel";
 import DashNav from "./components/layout/DashNav";
+import Navbar  from "./components/layout/Navbar";
 
 function Router() {
   const { loggedIn } = useContext(AuthContext);
@@ -24,13 +25,13 @@ function Router() {
           <Index />
         </Route>
         <Route path="/search">
-          <DashNav />
+          <Navbar />
           <Search />
         </Route>
         <Route exact path="/faqs">
           <Faqs />
         </Route>
-        {!loggedIn && (
+        {loggedIn && (
           <>
             <Route path="/register">
               <Register />
@@ -40,12 +41,12 @@ function Router() {
             </Route>
           </>
         )}
-        {loggedIn && (
+        {!loggedIn && (
           <>
            
             {/* This is for admin to view all parcels */}
             <Route exact path="/parcel">
-              <DashNav />
+            
               <Parcels />
             </Route>
             {/* This route is for the admin to add it */}

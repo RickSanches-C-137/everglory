@@ -27,7 +27,7 @@ export default function Footer() {
           <div className="w-full lg:w-6/12 px-4">
             <h4 className="text-3xl font-semibold">Let's keep in touch!</h4>
             <h5 className="text-lg mt-0 mb-2 text-gray-700">
-              Kindly send us a message with via the form above, we respond 1-2 business days.
+              Kindly send us a message with via the message form, we respond 1-2 business days.
             </h5>
             
           </div>
