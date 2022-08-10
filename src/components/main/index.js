@@ -16,7 +16,6 @@ import "antd/dist/antd.css";
 import { message } from "antd";
 export default function Landing() {
   const [name, setName] = useState("");
-  const [email] = useState("");
   const [messages, setMessage] = useState("");
   async function saveParcel(e) {
     e.preventDefault();
@@ -24,7 +23,6 @@ export default function Landing() {
     try {
       const messageData = {
         name,
-        email,
         messages,
       };
       await requestClient.post("message/", messageData, {
@@ -33,7 +31,7 @@ export default function Landing() {
       message.success("Request has been sent!");
     } catch (err) {
       console.error(err);
-      message.success("Error Sending Message. Try again!");
+      message.error("Error Sending Message. Try again!");
       
     }
   }
