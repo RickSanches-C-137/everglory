@@ -8,7 +8,7 @@ export default function Search() {
   async function searchParcel(e) {
     e.preventDefault();
     try {
-      const res =  await requestClient.post(`parcel/${_id}`);
+      const res =  await requestClient.get(`parcel/${_id}`);
        setParcels(res.data);
     } catch (err) {
       console.error(err);
