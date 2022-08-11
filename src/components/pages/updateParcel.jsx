@@ -111,6 +111,7 @@ export const Update = () => {
             value={parcel.status}
             name="status"
           >
+            <option>Hold</option>
             <option>Moving</option>
             <option>Delivered</option>
             
